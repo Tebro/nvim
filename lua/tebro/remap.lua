@@ -14,6 +14,8 @@ vim.keymap.set('n', '<leader>fe', ':e $MYVIMRC<cr>')
 -- Yank to system clipboard
 vim.keymap.set({ 'n', 'v' }, '<leader>y', '"+y')
 vim.keymap.set('n', '<leader>Y', '"+Y')
+-- Paste from system
+vim.keymap.set('n', '<leader>p', '"+p')
 
 -- Visual mode move lines
 vim.keymap.set("v", "J", ":m '>+1<CR>gv=gv")
