@@ -9,7 +9,7 @@ vim.keymap.set('i', 'fd', '<Esc>')
 -- nice save shortcut
 vim.keymap.set('n', '<leader>w', vim.cmd.update)
 -- Edit this file
-vim.keymap.set('n', '<leader>fe', ':e $MYVIMRC<cr>')
+vim.keymap.set('n', '<leader>fe', ':e $MYVIMRC<cr>:e %:h<cr>')
 
 -- Yank to system clipboard
 vim.keymap.set({ 'n', 'v' }, '<leader>y', '"+y')
