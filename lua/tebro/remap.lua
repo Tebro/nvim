@@ -5,6 +5,7 @@ vim.g.mapleader = " "
 -- use fd to get out of insert mode in files and terminal
 vim.keymap.set('t', 'fd', '<C-\\><C-n>')
 vim.keymap.set('i', 'fd', '<Esc>')
+vim.keymap.set('v', 'fd', '<Esc>')
 
 -- nice save shortcut
 vim.keymap.set('n', '<leader>w', vim.cmd.update)
