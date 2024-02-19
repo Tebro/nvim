@@ -10,14 +10,6 @@ return {
           enabled = true
         }
       },
-      config = function()
-        local zen = require("zen-mode")
-        vim.keymap.set('n', '<leader>z', function()
-          zen.toggle({
-            width = .85
-          })
-        end)
-      end
     }
   }
 }
