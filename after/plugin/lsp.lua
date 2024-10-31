@@ -10,6 +10,8 @@ lsp_zero.on_attach(function(client, bufnr)
 	vim.keymap.set('n', '<leader>rn', vim.lsp.buf.rename, opts)
 	vim.keymap.set('n', '<leader>lr', ':LspRestart<cr>', opts)
 	vim.keymap.set('n', '<leader>ca', vim.lsp.buf.code_action, opts)
+	vim.keymap.set('n', '<leader>q', vim.diagnostic.setloclist, opts)
+	vim.keymap.set('n', '<leader>Q', vim.diagnostic.open_float, opts)
 	vim.keymap.set('n', '<leader>lf', function()
 		vim.lsp.buf.format { async = true }
 	end, opts)
