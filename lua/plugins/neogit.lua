@@ -7,5 +7,13 @@ return {
     -- Only one of these is needed.
     "nvim-telescope/telescope.nvim", -- optional
   },
-  config = true
+  config = function()
+		local neogit = require("neogit")
+		neogit.setup{}
+
+		vim.keymap.set('n', '<leader>gS', function()
+			neogit.open({kind = "floating"})
+		end)
+
+	end
 }
