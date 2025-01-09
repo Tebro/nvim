@@ -32,11 +32,11 @@ vim.keymap.set("n", "J", "mzJ`z")
 vim.keymap.set("n", "<C-d>", "<C-d>zz")
 vim.keymap.set("n", "<C-u>", "<C-u>zz")
 
---vim.keymap.set('n', '<leader>e', function()
---  vim.cmd.edit(vim.fn.getcwd())
---end)
----- open dir of current file
---vim.keymap.set('n', '<leader>E', vim.cmd.Ex)
+vim.keymap.set('n', '<leader>e', function()
+  vim.cmd.edit(vim.fn.getcwd())
+end)
+-- open dir of current file
+vim.keymap.set('n', '<leader>E', vim.cmd.Ex)
 
 -- clear highlight
 vim.keymap.set('n', '<leader><return>', ':noh<cr>')
