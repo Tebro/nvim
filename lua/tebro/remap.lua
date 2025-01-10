@@ -40,3 +40,7 @@ vim.keymap.set('n', '<leader>E', vim.cmd.Ex)
 
 -- clear highlight
 vim.keymap.set('n', '<leader><return>', ':noh<cr>')
+
+-- Maximize window
+vim.keymap.set('n', '<C-W>m', '<C-W>|<C-W>_')
+
