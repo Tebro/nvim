@@ -44,3 +44,6 @@ vim.keymap.set('n', '<leader><return>', ':noh<cr>')
 -- Maximize window
 vim.keymap.set('n', '<C-W>m', '<C-W>|<C-W>_')
 
+-- New tab terminal
+vim.keymap.set('n', '<leader>tT', ':tabnew +terminal<cr>')
+
