@@ -36,7 +36,7 @@ vim.keymap.set('n', '<leader>e', function()
   vim.cmd.edit(vim.fn.getcwd())
 end)
 -- open dir of current file
-vim.keymap.set('n', '<leader>E', vim.cmd.Ex)
+vim.keymap.set('n', '<leader>E', vim.cmd.Oil)
 
 -- clear highlight
 vim.keymap.set('n', '<leader><return>', ':noh<cr>')
