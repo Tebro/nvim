@@ -11,11 +11,9 @@ return {
 		local neogit = require("neogit")
 		neogit.setup{}
 
-		vim.keymap.set('n', '<leader>gs', neogit.open)
-
-		vim.keymap.set('n', '<leader>gf', function()
-			neogit.open({kind = "floating"})
-		end)
+		vim.keymap.set('n', '<leader>gs', ':Neogit kind=split_above_all cwd=%:p:h<cr>')
+		vim.keymap.set('n', '<leader>gf', ':Neogit kind=floating cwd=%:p:h<cr>')
+		vim.keymap.set('n', '<leader>gt', ':Neogit kind=tab cwd=%:p:h<cr>')
 
 		vim.keymap.set('n', '<leader>gl', ':NeogitLogCurrent<cr>')
 
