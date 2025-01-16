@@ -17,5 +17,20 @@ return {
 
 		vim.keymap.set('n', '<leader>gl', ':NeogitLogCurrent<cr>')
 
+		vim.api.nvim_create_autocmd("User", {
+			pattern = "NeogitStatusRefreshed",
+			callback = function()
+				vim.cmd("set autoread | checktime")
+			-- This will remain for archeological purposes
+			--	local buffers = vim.tbl_filter(function(buf)
+			--		return vim.api.nvim_buf_is_valid(buf) and vim.bo[buf].filetype ~= "NeogitStatus"
+			--	end, vim.api.nvim_list_bufs())
+
+			--	for _, buf in ipairs(buffers) do
+			--		vim.cmd("checktime " .. buf)
+			--	end
+			end
+		})
+
 	end
 }
