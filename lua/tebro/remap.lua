@@ -47,3 +47,4 @@ vim.keymap.set('n', '<C-W>m', '<C-W>|<C-W>_')
 -- New tab terminal
 vim.keymap.set('n', '<leader>tT', ':tabnew +terminal<cr>')
 
+vim.keymap.set('n', '<leader>rl',':checktime<cr>')
