@@ -12,6 +12,7 @@ return {
 		},
 		opts = {
 			debug = true,
+			model = "claude-3.5-sonnet"
 		}
 	}
 }
