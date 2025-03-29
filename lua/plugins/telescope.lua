@@ -11,5 +11,6 @@ return { { -- Fuzzy file finder, also does buffers and live grep
     vim.keymap.set('n', '<leader>fb', builtin.buffers, {})
     vim.keymap.set('n', '<leader>fr', builtin.resume, {})
     vim.keymap.set('n', '<leader>fh', builtin.help_tags, {})
+    vim.keymap.set('n', '<leader>fs', builtin.lsp_dynamic_workspace_symbols, {})
   end
 } }
