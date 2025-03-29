@@ -48,3 +48,11 @@ vim.keymap.set('n', '<C-W>m', '<C-W>|<C-W>_')
 vim.keymap.set('n', '<leader>tT', ':tabnew +terminal<cr>')
 
 vim.keymap.set('n', '<leader>rl',':checktime<cr>')
+
+-- Quickfix 
+vim.keymap.set('n', '<leader>c<return>', ':copen<cr>')
+vim.keymap.set('n', '<leader>cf',':cfirst<cr>')
+vim.keymap.set('n', '<leader>cn',':cnext<cr>')
+vim.keymap.set('n', '<leader>cp',':cprevious<cr>')
+
+
