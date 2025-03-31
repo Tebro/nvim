@@ -28,3 +28,5 @@ vim.opt.wrap = false
 vim.opt.colorcolumn = "80"
 
 vim.opt.laststatus = 3
+
+vim.diagnostic.config({ virtual_text = true, virtual_lines = { current_line = true } })
