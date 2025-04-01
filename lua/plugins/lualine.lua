@@ -4,7 +4,7 @@ return {
     dependencies = { "nvim-tree/nvim-web-devicons" },
     config = function()
       require("lualine").setup({
-        extensions = { "lazy", "nvim-tree", "fugitive" }
+        extensions = { "lazy",  "fugitive", "mason", "aerial", "oil", "quickfix", "toggleterm" }
       })
     end
   },
