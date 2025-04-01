@@ -1,4 +1,3 @@
-
 local capabilities = require('cmp_nvim_lsp').default_capabilities()
 return {
 	cmd = {
@@ -6,6 +5,6 @@ return {
 		"--stdio",
 	},
 	capabilities = capabilities,
-	root_markers = {'package.json', 'tsconffig.json'},
-	filetypes = {"typescript", "typescriptreact", "typescript.tsx", "javascript", "javascriptreact", "javascript.jsx"},
+	root_markers = { 'package.json', 'tsconfig.json' },
+	filetypes = { "typescript", "typescriptreact", "typescript.tsx", "javascript", "javascriptreact", "javascript.jsx" },
 }

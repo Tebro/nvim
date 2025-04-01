@@ -1,6 +1,4 @@
-
-
-vim.lsp.enable({ "ts_ls", "lua_ls", "gopls" })
+vim.lsp.enable({ "ts_ls", "lua_ls", "gopls", "eslint", "tailwindcss", "sqlls" })
 
 vim.keymap.set('n', 'gd', vim.lsp.buf.definition)
 vim.keymap.set('n', '<leader>rn', vim.lsp.buf.rename)
