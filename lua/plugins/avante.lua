@@ -7,7 +7,6 @@ return {
 	opts = {
 		-- add any opts here
 		provider = "copilot",
-		auto_suggestion_provider = "copilot",
 		copilot = {
 			model = "claude-3.7-sonnet",
 		}
