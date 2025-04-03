@@ -9,6 +9,9 @@ return {
 		provider = "copilot",
 		copilot = {
 			model = "claude-3.7-sonnet",
+		},
+		web_search_engine = {
+			provider = "kagi"
 		}
 	},
 	-- if you want to build from source then do `make BUILD_FROM_SOURCE=true`
