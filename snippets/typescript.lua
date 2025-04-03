@@ -13,5 +13,7 @@ const {}: React.FC<{}Props> = ({}) => {{
 const {} = zod.object({{
   {}
 }});
-]], { i(1), i(2) }))
+
+type {} = zod.infer<typeof {}>;
+]], { i(1), i(2), i(3), rep(1) })),
 }
