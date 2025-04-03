@@ -31,10 +31,10 @@ return {
 					documentation = cmp.config.window.bordered(),
 				},
 				sources = {
+					{ name = 'luasnip' },
 					{ name = 'copilot' },
 					{ name = 'nvim_lsp' },
 					{ name = 'buffer' },
-					{ name = 'luasnip' },
 				},
 			})
 
