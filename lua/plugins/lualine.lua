@@ -8,7 +8,9 @@ return {
 				winbar = {
 					lualine_a = {},
 					lualine_b = {},
-					lualine_c = { {'filename', path = 1, file_status = true, shorting_target = 0} },
+					lualine_c = { {'filename', path = 1, file_status = true, shorting_target = 0, cond = function ()
+						return vim.bo.buftype ~= 'terminal'
+					end} },
 					lualine_x = {},
 					lualine_y = {},
 					lualine_z = {}
@@ -16,7 +18,9 @@ return {
 				inactive_winbar = {
 					lualine_a = {},
 					lualine_b = {},
-					lualine_c = { {'filename', path = 1, file_status = true, shorting_target = 0} },
+					lualine_c = { {'filename', path = 1, file_status = true, shorting_target = 0, cond = function ()
+						return vim.bo.buftype ~= 'terminal'
+					end} },
 					lualine_x = {},
 					lualine_y = {},
 					lualine_z = {}
