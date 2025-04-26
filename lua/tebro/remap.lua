@@ -1,4 +1,3 @@
-
 -- <leader> is space
 vim.g.mapleader = " "
 
@@ -33,7 +32,7 @@ vim.keymap.set("n", "<C-d>", "<C-d>zz")
 vim.keymap.set("n", "<C-u>", "<C-u>zz")
 
 vim.keymap.set('n', '<leader>e', function()
-  vim.cmd.edit(vim.fn.getcwd())
+	vim.cmd.edit(vim.fn.getcwd())
 end)
 -- open dir of current file
 vim.keymap.set('n', '<leader>E', vim.cmd.Oil)
@@ -47,12 +46,7 @@ vim.keymap.set('n', '<C-W>m', '<C-W>|<C-W>_')
 -- New tab terminal
 vim.keymap.set('n', '<leader>tT', ':tabnew +terminal<cr>')
 
-vim.keymap.set('n', '<leader>rl',':checktime<cr>')
+vim.keymap.set('n', '<leader>rl', ':checktime<cr>')
 
--- Quickfix 
--- vim.keymap.set('n', '<leader>co', ':copen<cr>')
--- vim.keymap.set('n', '<leader>cf',':cfirst<cr>')
--- vim.keymap.set('n', '<leader>cn',':cnext<cr>')
--- vim.keymap.set('n', '<leader>cp',':cprevious<cr>')
-
-
+-- Expand 'cc' into 'CodeCompanion' in the command line
+vim.cmd([[cab cc CodeCompanion]])
