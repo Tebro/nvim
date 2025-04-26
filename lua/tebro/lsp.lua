@@ -1,4 +1,11 @@
-vim.lsp.enable({ "ts_ls", "lua_ls", "gopls", "eslint", "tailwindcss", "sqlls" })
+vim.lsp.enable({
+	--"ts_ls",
+	"lua_ls",
+	"gopls",
+	"eslint",
+	"tailwindcss",
+	"sqlls"
+})
 
 vim.diagnostic.config({ virtual_text = true })
 
