@@ -32,6 +32,7 @@ return {
 					documentation = cmp.config.window.bordered(),
 				},
 				sources = {
+					{ name = 'render-markdown' },
 					{ name = 'luasnip' },
 					{ name = 'copilot' },
 					{ name = 'nvim_lsp' },
