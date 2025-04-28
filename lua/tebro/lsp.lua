@@ -4,7 +4,8 @@ vim.lsp.enable({
 	"gopls",
 	"eslint",
 	"tailwindcss",
-	"sqlls"
+	"sqlls",
+	"nil"
 })
 
 vim.diagnostic.config({ virtual_text = true })
