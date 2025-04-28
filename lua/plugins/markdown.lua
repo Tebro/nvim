@@ -4,18 +4,18 @@ return {
 		keys = function()
 			return {
 				{
-					"<leader>m",
+					"<leader>n",
 					function()
 						require("nabla").popup()
 					end,
-					desc = "NablPopUp",
+					desc = "NablaPopUp",
 				},
 				{
-					"<leader>M",
+					"<leader>N",
 					function()
 						require("nabla").toggle_virt()
 					end,
-					desc = "NablToggle",
+					desc = "NablaToggle",
 				},
 			}
 		end,
