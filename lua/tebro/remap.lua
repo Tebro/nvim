@@ -1,5 +1,6 @@
 -- <leader> is space
 vim.g.mapleader = " "
+vim.g.maplocalleader = ","
 
 -- use fd to get out of insert mode in files and terminal
 vim.keymap.set('t', 'fd', '<C-\\><C-n>')
@@ -10,6 +11,7 @@ vim.keymap.set('v', 'fd', '<Esc>')
 vim.keymap.set('n', '<leader>w', vim.cmd.update)
 -- Edit this file
 vim.keymap.set('n', '<leader>fe', ':e $MYVIMRC<cr>')
+vim.keymap.set('n', '<leader>fE', ':e $MYVIMRC<cr>:cd %:h<cr>')
 
 -- Yank to system clipboard
 vim.keymap.set({ 'n', 'v' }, '<leader>y', '"+y')
