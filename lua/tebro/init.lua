@@ -8,4 +8,5 @@ require("tebro.neovide")
 
 
 -- Pretty colors
-vim.cmd [[colorscheme nord]]
+vim.cmd [[colorscheme catppuccin]]
+
