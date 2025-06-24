@@ -1,9 +1,13 @@
 return {
 	{
 		"zbirenbaum/copilot.lua",
+		lazy = false,
 		opts = {
 			suggestion = { enabled = true, auto_trigger = true },
 			panel = { enabled = false },
+		},
+		keys = {
+			{"<C-j>", mode = "i", function() require("copilot.suggestion").accept() end}
 		},
 		config = true
 	},
