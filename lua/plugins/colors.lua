@@ -6,4 +6,10 @@ return {
     lazy = false,
     priority = 1000
   },
+	{
+    "arcticicestudio/nord-vim",
+    name = "nord",
+    lazy = false,
+    priority = 1000
+	}
 }
