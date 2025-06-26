@@ -1,24 +1,24 @@
 return {
 	{
 		"jbyuki/nabla.nvim",
-		keys = function()
-			return {
-				{
-					"<leader>n",
-					function()
-						require("nabla").popup()
-					end,
-					desc = "NablaPopUp",
-				},
-				{
-					"<leader>N",
-					function()
-						require("nabla").toggle_virt()
-					end,
-					desc = "NablaToggle",
-				},
-			}
-		end,
+		--keys = function()
+		--	return {
+		--		{
+		--			"<leader>n",
+		--			function()
+		--				require("nabla").popup()
+		--			end,
+		--			desc = "NablaPopUp",
+		--		},
+		--		{
+		--			"<leader>N",
+		--			function()
+		--				require("nabla").toggle_virt()
+		--			end,
+		--			desc = "NablaToggle",
+		--		},
+		--	}
+		--end,
 
 	},
 	{
