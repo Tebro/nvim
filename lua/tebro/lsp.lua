@@ -5,7 +5,8 @@ vim.lsp.enable({
 	"eslint",
 	"tailwindcss",
 	"sqlls",
-	"nil"
+	"nil",
+	"zls"
 })
 
 vim.diagnostic.config({ virtual_text = true })
@@ -19,3 +20,4 @@ vim.keymap.set('n', '<leader>Q', vim.diagnostic.open_float)
 vim.keymap.set('n', '<leader>lf', function()
 	vim.lsp.buf.format { async = true }
 end)
+
