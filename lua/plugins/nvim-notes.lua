@@ -16,14 +16,14 @@ return {
 			{
 				"<leader>nj",
 				function()
-					require("notes-nvim").new_journal_entry()
+					require("notes-nvim").journal_today()
 				end,
 				desc = "New Journal Entry",
 			},
 			{
 				"<leader>nq",
 				function()
-					require("notes-nvim").new_quick_note()
+					require("notes-nvim").quick_note()
 				end,
 				desc = "New Quick Note",
 			},
