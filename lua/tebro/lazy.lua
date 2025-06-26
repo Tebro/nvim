@@ -13,4 +13,13 @@ end
 vim.opt.rtp:prepend(lazypath)
 -- End Lazy install
 
-require("lazy").setup("plugins")
+require("lazy").setup({
+	spec = {
+		{import = "plugins"}
+	},
+	
+	dev = {
+		path = "~/code"
+	}
+	
+})
