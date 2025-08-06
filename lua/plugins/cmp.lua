@@ -32,7 +32,6 @@ return {
 					documentation = cmp.config.window.bordered(),
 				},
 				sources = {
-					{ name = "neorg" },
 					{ name = 'render-markdown' },
 					{ name = 'luasnip' },
 					--{ name = 'copilot' },
