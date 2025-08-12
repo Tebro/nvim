@@ -6,7 +6,8 @@ vim.lsp.enable({
 	"tailwindcss",
 	"sqlls",
 	"nil",
-	"zls"
+	"zls",
+	"rust_analyzer"
 })
 
 vim.diagnostic.config({ virtual_text = true })
