@@ -2,7 +2,7 @@ vim.lsp.enable({
 	--"ts_ls",
 	"lua_ls",
 	"gopls",
-	"eslint",
+	--"eslint",
 	"tailwindcss",
 	--"sqlls",
 	"zls",
