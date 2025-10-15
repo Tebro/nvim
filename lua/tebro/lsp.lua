@@ -4,8 +4,7 @@ vim.lsp.enable({
 	"gopls",
 	"eslint",
 	"tailwindcss",
-	"sqlls",
-	"nil",
+	--"sqlls",
 	"zls",
 	"rust_analyzer"
 })
