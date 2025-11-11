@@ -25,6 +25,9 @@ vim.keymap.set("v", "K", ":m '<-2<CR>gv=gv")
 
 -- Find/Replace for symbol under cursor
 vim.keymap.set("n", "<leader>s", [[:%s/\<<C-r><C-w>\>/<C-r><C-w>/gI<Left><Left><Left>]])
+-- Find/Replace for selection in buffer
+vim.keymap.set("v", "<leader>s", [[y:%s/\<<C-r>0\>/<C-r>0/gI<Left><Left><Left>]])
+vim.keymap.set("v", "<leader>S", [[y:%s/\<<C-r>0\>/<C-r>0/gcI<Left><Left><Left><Left>]])
 
 -- Join lines, maintain cursor position
 vim.keymap.set("n", "J", "mzJ`z")
