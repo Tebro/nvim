@@ -10,8 +10,8 @@ vim.keymap.set('v', 'fd', '<Esc>')
 -- nice save shortcut
 vim.keymap.set('n', '<leader>w', vim.cmd.update)
 -- Edit this file
-vim.keymap.set('n', '<leader>fe', ':e $MYVIMRC<cr>')
-vim.keymap.set('n', '<leader>fE', ':cd ~/.config/nvim<cr>')
+--vim.keymap.set('n', '<leader>fe', ':e $MYVIMRC<cr>')
+--vim.keymap.set('n', '<leader>fE', ':cd ~/.config/nvim<cr>')
 
 -- Yank to system clipboard
 vim.keymap.set({ 'n', 'v' }, '<leader>y', '"+y')
