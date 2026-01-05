@@ -36,7 +36,7 @@ return {
 
 			-- Use the traversal keys to repeat the previous motion without
 			-- explicitly invoking Leap:
-			require('leap.user').set_repeat_keys('<enter>', '<backspace>')
+			--require('leap.user').set_repeat_keys('<enter>', '<backspace>')
 		end
 
 	} 

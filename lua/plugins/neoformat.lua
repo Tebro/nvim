@@ -3,7 +3,7 @@ return {
 	config = function()
 		vim.api.nvim_create_autocmd("BufWritePre", {
 			pattern = { "*.tsx", "*.ts", "*.js", "*.jsx", "*.json", "*.html", "*.css", "*.scss" },
-			command = "Neoformat prettier"
+			command = "Neoformat prettierd"
 		})
 		vim.api.nvim_create_autocmd("BufWritePre", {
 			pattern = { "*.go" },
