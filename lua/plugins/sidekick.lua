@@ -79,7 +79,12 @@ return {
 			{
 				"<leader>ac",
 				function() require("sidekick.cli").toggle({ name = "codex", focus = true }) end,
-				desc = "Sidekick Toggle Claude",
+				desc = "Sidekick Toggle Codex",
+			},
+			{
+				"<leader>ao",
+				function() require("sidekick.cli").toggle({ name = "opencode", focus = true }) end,
+				desc = "Sidekick Toggle Opencode",
 			},
 		},
 	}
