@@ -21,6 +21,9 @@ return {
 				path = "~/Sync/notes",
 			},
 		},
+		picker = {
+			name = 'snacks.pick'  	
+		},
 		legacy_commands = false,
 		daily_notes = {
 			-- Optional, if you keep daily notes in a separate directory.

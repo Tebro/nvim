@@ -5,7 +5,7 @@ return {
 		opts = {
 			-- add any options here
 			nes = {
-				enabled = false,
+				enabled = true,
 			},
 			cli = {
 				mux = {
