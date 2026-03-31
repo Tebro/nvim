@@ -2,7 +2,7 @@ vim.pack.add({
 	"https://github.com/github/copilot.vim",
 	"https://github.com/folke/sidekick.nvim",
 
-	"https://github.com/nickjvandyke/opencode.nvim",
+	"https://github.com/carlos-algms/agentic.nvim"
 })
 
 require('sidekick').setup({
@@ -29,31 +29,11 @@ end, { expr = true, desc = "Goto/Apply Next Edit Suggestion" })
 -- vim.keymap.set({ "x", "n" }, "<leader>af", function() require("sidekick.cli").send({ msg = "{file}" }) end, { desc = "Send File" })
 -- vim.keymap.set({"v"}, "<leader>av", function() require("sidekick.cli").send({ msg = "{selection}" }) end, { desc = "Send Selection" })
 
----@type opencode.Opts
-vim.g.opencode_opts = {
-	server = {
-		start = function() 
-      require("opencode.terminal").open("opencode --agent plan --port", {
-        split = "right",
-        width = math.floor(vim.o.columns * 0.35),
-      })
-		end,
-		toggle = function()
-      require("opencode.terminal").toggle("opencode --agent plan --port", {
-        split = "right",
-        width = math.floor(vim.o.columns * 0.35),
-      })
-		end
-	}
-}
+require("agentic").setup({
+	provider = "opencode-acp"
+})
 
-vim.o.autoread = true -- Required for `opts.events.reload`
-
--- Recommended/example keymaps
-vim.keymap.set({ "n", "x" }, "<leader>as", function() require("opencode").ask("@this: ", { submit = true }) end, { desc = "Ask opencode…" })
-vim.keymap.set({ "n", "x" }, "<leader>ac", function() require("opencode").select() end,                          { desc = "Execute opencode action…" })
-vim.keymap.set({ "n", "t" }, "<leader>aa", function() require("opencode").toggle() end,                          { desc = "Toggle opencode" })
-
-vim.keymap.set({ "n", "x" }, "go",  function() return require("opencode").operator("@this ") end,        { desc = "Add range to opencode", expr = true })
-vim.keymap.set("n",          "goo", function() return require("opencode").operator("@this ") .. "_" end, { desc = "Add line to opencode", expr = true })
-
+vim.keymap.set({"n", "v"}, "<leader>aa", function() require("agentic").toggle() end, { desc = "Toggle Agentic" })
+vim.keymap.set({"n", "v"}, "<leader>af", function() require("agentic").add_selection_or_file_to_context() end, { desc = "Add Selection or File to Context" })
+vim.keymap.set({"n", "v"}, "<leader>ad", function() require("agentic").add_current_line_diagnostic() end, { desc = "Add Current Line Diagnostic" })
+vim.keymap.set({"n", "v"}, "<leader>aD", function() require("agentic").add_buffer_diagnostics() end, { desc = "Add Buffer Diagnostics" })

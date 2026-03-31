@@ -5,7 +5,7 @@ vim.pack.add({
 })
 
 require('render-markdown').setup({
-	file_types = { "markdown", "Avante" },
+	file_types = { "markdown", "Avante", "AgenticChat" },
 	latex = { enabled = false },
 	win_options = { conceallevel = { rendered = 2 } },
 })
