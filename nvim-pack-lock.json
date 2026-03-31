@@ -4,6 +4,10 @@
       "rev": "645d108a5242ec7b378cbe643eb6d04d4223f034",
       "src": "https://github.com/stevearc/aerial.nvim"
     },
+    "agentic.nvim": {
+      "rev": "1c662b584511cf61ee23a22256db46cf3f3f8495",
+      "src": "https://github.com/carlos-algms/agentic.nvim"
+    },
     "copilot.vim": {
       "rev": "a12fd5672110c8aa7e3c8419e28c96943ca179be",
       "src": "https://github.com/github/copilot.vim"
@@ -23,6 +27,10 @@
     "koda.nvim": {
       "rev": "a560a332ccc1eb2caacb280a390213bb9f37b3cb",
       "src": "https://github.com/oskarnurm/koda.nvim"
+    },
+    "lualine.nvim": {
+      "rev": "47f91c416daef12db467145e16bed5bbfe00add8",
+      "src": "https://github.com/nvim-lualine/lualine.nvim"
     },
     "mason-lspconfig.nvim": {
       "rev": "037398b9ce4a53ba48d5f94765c641a1fd16d906",
