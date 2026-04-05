@@ -80,6 +80,10 @@
       "rev": "0fcc83805ad11cf714a949c98c605ed717e0b83e",
       "src": "https://github.com/stevearc/oil.nvim"
     },
+    "opencode-fo.nvim": {
+      "rev": "4428307540ec1e856a2fa1779cac37166232bb57",
+      "src": "https://codeberg.org/Tebro/opencode-fo.nvim"
+    },
     "opencode.nvim": {
       "rev": "df533d6da724109bf08446392db860fdceddbd0c",
       "src": "https://github.com/nickjvandyke/opencode.nvim"

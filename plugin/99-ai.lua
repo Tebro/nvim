@@ -1,6 +1,7 @@
 vim.pack.add({
 	"https://github.com/github/copilot.vim",
 	"https://github.com/folke/sidekick.nvim",
+	"https://codeberg.org/Tebro/opencode-fo.nvim"
 })
 
 require('sidekick').setup({
@@ -25,4 +26,22 @@ vim.keymap.set("n", "<leader>ad", function() require("sidekick.cli").close() end
 vim.keymap.set({ "x", "n" }, "<leader>at", function() require("sidekick.cli").send({ msg = "{this}" }) end, { desc = "Send This" })
 vim.keymap.set({ "x", "n" }, "<leader>af", function() require("sidekick.cli").send({ msg = "{file}" }) end, { desc = "Send File" })
 vim.keymap.set({"v"}, "<leader>av", function() require("sidekick.cli").send({ msg = "{selection}" }) end, { desc = "Send Selection" })
+
+require("opencode_fo").setup({
+	opencode = {
+		model = "openai/gpt-5.4-mini",
+		variant = "none"
+	},
+})
+
+vim.keymap.set("n", "<leader>ai", "<cmd>OpenCodeFOImplement<CR>", { desc = "Implement Code" })
+vim.keymap.set("n", "<leader>ag", ":OpenCodeFOGenerate ", { desc = "Generate" })
+vim.keymap.set("x", "<leader>ag", function()
+  require("opencode_fo").generate_selection()
+end, { desc = "Generate with OpenCode FO" })
+
+vim.keymap.set("x", "<leader>ai", function()
+  require("opencode_fo").implement_selection()
+end, { desc = "Implement with OpenCode FO" })
+
 
