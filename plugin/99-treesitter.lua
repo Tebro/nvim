@@ -16,12 +16,13 @@ vim.api.nvim_create_autocmd('FileType', {
   callback = function() vim.treesitter.start() end,
 })
 
-require('nvim-treesitter').install { 
-	"c", 
-	"lua", 
+require('nvim-treesitter').install {
+	"c",
+	"lua",
 	"rust",
 	"go",
 	"typescript",
+	"tsx",
 	"javascript",
 	"html",
 	"bash",

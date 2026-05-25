@@ -1,47 +1,47 @@
-vim.pack.add({
-	"https://github.com/github/copilot.vim",
-	"https://github.com/folke/sidekick.nvim",
-	"https://codeberg.org/Tebro/opencode-fo.nvim"
-})
-
-require('sidekick').setup({
-	nes = { enabled = true },
-	cli = {
-		mux = {
-			enabled = true,
-			backend = "tmux"
-		},
-	},
-})
-
-vim.keymap.set({ "n", "x", "o" }, "<tab>", function()
-	if not require("sidekick").nes_jump_or_apply() then
-		return "<Tab>"
-	end
-end, { expr = true, desc = "Goto/Apply Next Edit Suggestion" })
-
-vim.keymap.set("n", "<leader>aa", function() require("sidekick.cli").toggle() end, { desc = "Sidekick Toggle CLI" })
-vim.keymap.set("n", "<leader>as", function() require("sidekick.cli").select() end, { desc = "Select CLI" })
-vim.keymap.set("n", "<leader>ad", function() require("sidekick.cli").close() end, { desc = "Detach a CLI Session" })
-vim.keymap.set({ "x", "n" }, "<leader>at", function() require("sidekick.cli").send({ msg = "{this}" }) end, { desc = "Send This" })
-vim.keymap.set({ "x", "n" }, "<leader>af", function() require("sidekick.cli").send({ msg = "{file}" }) end, { desc = "Send File" })
-vim.keymap.set({"v"}, "<leader>av", function() require("sidekick.cli").send({ msg = "{selection}" }) end, { desc = "Send Selection" })
-
-require("opencode_fo").setup({
-	opencode = {
-		model = "openai/gpt-5.4-mini",
-		variant = "none"
-	},
-})
-
-vim.keymap.set("n", "<leader>ai", "<cmd>OpenCodeFOImplement<CR>", { desc = "Implement Code" })
-vim.keymap.set("n", "<leader>ag", ":OpenCodeFOGenerate ", { desc = "Generate" })
-vim.keymap.set("x", "<leader>ag", function()
-  require("opencode_fo").generate_selection()
-end, { desc = "Generate with OpenCode FO" })
-
-vim.keymap.set("x", "<leader>ai", function()
-  require("opencode_fo").implement_selection()
-end, { desc = "Implement with OpenCode FO" })
-
-
+-- vim.pack.add({
+-- 	"https://github.com/github/copilot.vim",
+-- 	"https://github.com/folke/sidekick.nvim",
+-- 	"https://codeberg.org/Tebro/opencode-fo.nvim"
+-- })
+--
+-- require('sidekick').setup({
+-- 	nes = { enabled = true },
+-- 	cli = {
+-- 		mux = {
+-- 			enabled = true,
+-- 			backend = "tmux"
+-- 		},
+-- 	},
+-- })
+--
+-- vim.keymap.set({ "n", "x", "o" }, "<tab>", function()
+-- 	if not require("sidekick").nes_jump_or_apply() then
+-- 		return "<Tab>"
+-- 	end
+-- end, { expr = true, desc = "Goto/Apply Next Edit Suggestion" })
+--
+-- vim.keymap.set("n", "<leader>aa", function() require("sidekick.cli").toggle() end, { desc = "Sidekick Toggle CLI" })
+-- vim.keymap.set("n", "<leader>as", function() require("sidekick.cli").select() end, { desc = "Select CLI" })
+-- vim.keymap.set("n", "<leader>ad", function() require("sidekick.cli").close() end, { desc = "Detach a CLI Session" })
+-- vim.keymap.set({ "x", "n" }, "<leader>at", function() require("sidekick.cli").send({ msg = "{this}" }) end, { desc = "Send This" })
+-- vim.keymap.set({ "x", "n" }, "<leader>af", function() require("sidekick.cli").send({ msg = "{file}" }) end, { desc = "Send File" })
+-- vim.keymap.set({"v"}, "<leader>av", function() require("sidekick.cli").send({ msg = "{selection}" }) end, { desc = "Send Selection" })
+--
+-- require("opencode_fo").setup({
+-- 	opencode = {
+-- 		model = "openai/gpt-5.4-mini",
+-- 		variant = "none"
+-- 	},
+-- })
+--
+-- vim.keymap.set("n", "<leader>ai", "<cmd>OpenCodeFOImplement<CR>", { desc = "Implement Code" })
+-- vim.keymap.set("n", "<leader>ag", ":OpenCodeFOGenerate ", { desc = "Generate" })
+-- vim.keymap.set("x", "<leader>ag", function()
+--   require("opencode_fo").generate_selection()
+-- end, { desc = "Generate with OpenCode FO" })
+--
+-- vim.keymap.set("x", "<leader>ai", function()
+--   require("opencode_fo").implement_selection()
+-- end, { desc = "Implement with OpenCode FO" })
+--
+--

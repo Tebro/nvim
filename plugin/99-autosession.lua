@@ -17,38 +17,34 @@ end
 vim.api.nvim_create_user_command("IsMain", function()
 	if is_main_branch() then
 		vim.notify("On main branch", vim.log.levels.INFO)
-	else 
+	else
 		vim.notify("Not on main branch", vim.log.levels.INFO)
 	end
 end, { desc = "Check if currently on main or master branch" })
 
+vim.pack.add({
+	"https://github.com/rmagatti/auto-session"
+})
 
-return {
-	'rmagatti/auto-session',
-	lazy = false,
+require("auto-session").setup({
+	suppressed_dirs = { '~/', '~/code', '~/Downloads', '/' },
+	-- log_level = 'debug',
+	cwd_change_handling = true,
+	git_use_branch_name = true,
+	git_auto_restore_on_branch_change = true,
+	pre_save_cmds = {
+		function()
+			if is_main_branch() then
+				return false
+			end
+		end
+	},
+	pre_restore_cmds = {
+		function()
+			if is_main_branch() then
+				return false
+			end
+		end
+	},
 
-	---enables autocomplete for opts
-	---@module "auto-session"
-	---@type AutoSession.Config
-	opts = {
-		suppressed_dirs = { '~/', '~/code', '~/Downloads', '/' },
-		-- log_level = 'debug',
-		cwd_change_handling = true,
-		git_use_branch_name = true,
-		git_auto_restore_on_branch_change = true,
-		pre_save_cmds = { 
-			function()
-				if is_main_branch() then
-					return false
-				end
-			end
-		},
-		pre_restore_cmds = { 
-			function()
-				if is_main_branch() then
-					return false
-				end
-			end
-		},
-	}
-}
+})

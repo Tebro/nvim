@@ -16,4 +16,4 @@ require("toggleterm").setup{
 vim.keymap.set('n', '<leader>th', '<Cmd>ToggleTerm direction=horizontal<CR>')
 vim.keymap.set('n', '<leader>tv', '<Cmd>ToggleTerm direction=vertical<CR>')
 vim.keymap.set('n', '<leader>tt', '<Cmd>ToggleTerm<CR>')
-vim.keymap.set({"n", "t", "i"}, '<C-Esc>', '<Cmd>ToggleTerm direction=float<CR>')
+vim.keymap.set({"n", "t", "i"}, '<C-space>', '<Cmd>ToggleTerm direction=float<CR>')
