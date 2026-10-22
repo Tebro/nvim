@@ -23,3 +23,18 @@ vim.api.nvim_create_user_command("Cppath", function()
     vim.fn.setreg("+", path)
     vim.notify('Copied "' .. path .. '" to the clipboard!')
 end, {})
+
+vim.api.nvim_create_user_command("CdGitRoot", function()
+    local path = vim.api.nvim_buf_get_name(0)
+    if path == "" or vim.bo.buftype ~= "" then
+        path = vim.fn.getcwd()
+    end
+
+    local root = vim.fs.root(path, ".git")
+    if not root then
+        vim.notify("No parent Git repository found", vim.log.levels.WARN)
+        return
+    end
+
+    vim.api.nvim_cmd({ cmd = "cd", args = { root } }, {})
+end, { desc = "Change working directory to the nearest parent Git root" })
